@@ -1,38 +1,101 @@
-.App {
-  text-align: center;
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";
+@import "./assets/font/style.css";
+*{
+  margin: 0;
+  padding: 0;
+  font-family:"Oxanium Regular", sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-color: #1b0e22;
+    background-image: url(./assets/body-bg.jpeg);
+    background-repeat: repeat;
+    background-position: 0 0;
+    font-family: 'Oxanium', sans-serif;
+    font-size: 17px;
+    /* line-height: 27px; */
+    color: #ddd;
+    font-weight: 400;
+    letter-spacing: -0.2px;
+    position: relative;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.slick-slider {
+  /* margin:0 -15px; */
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.slick-slide {
+  padding:20px;
+  text-align:center;
+  width:20% !important;
+  margin: 0 auto;
+  /* margin-right:15px; */
+  /* margin-left:15px; */
 }
-
-.App-link {
-  color: #61dafb;
+.hero-element {
+  position: relative;
 }
+.hero-element img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.hero-element .shape-wrap {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: -40px;
+  bottom: 0;
+  transform: skew(20deg);
+  z-index: -1;
+}
+.hero-element .shape {
+  background: #f90cff;
+  background-image: linear-gradient(to right bottom, #f90cff, #e027ff, #c534ff, #a93eff, #8a44ff, #6560ff, #3c73ff, #0081ff, #009cff, #00b3ff, #00c6f5, #0cd7e8);
+  width: 200px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 2px;
+}
+.hero-element .shape.shape-1 {
+  width: 220px;
+  height: 60%;
+  left: 30%;
+  z-index: 1;
+  opacity: 0.8;
+}
+.hero-element .shape:before {
+  background-image: repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25) 1px, transparent 1px, transparent 6px);
+  background-size: 4px 4px;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.hero-element .shape.shape-2 {
+  height: 90%;
+  left: 20%;
+  opacity: 0.7;
+}
+.hero-element .shape.shape-3 {
+  height: 70%;
+  z-index: 2;
+  opacity: 0.4;
+}
+.hero-element .shape.shape-4 {
+  height: 40%;
+  left: -10%;
+  opacity: 0.6;
+}
+.hero-element .shape-wrap.right {
+  transform: skew(-20deg);
+  left: auto;
+  right: -40px;
+}
+.slick-track{
+  padding-left: 62px;
+  overflow: hidden;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
